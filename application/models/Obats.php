@@ -1,17 +1,23 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class {{modelName}} extends MY_Model {
+class Obats extends MY_Model {
 
   function __construct () {
     parent::__construct();
-    $this->table = '{{tableName}}';
+    $this->table = 'obat';
     $this->thead = array(
       (object) array('mData' => 'orders', 'sTitle' => 'No', 'visible' => false),
-      {{theads}}
+      (object) array('mData' => 'nama', 'sTitle' => 'Nama'),
+
     );
-    $this->form = array ({{fields}}
+    $this->form = array (
+        array (
+				      'name' => 'nama',
+				      'width' => 2,
+		      		'label'=> 'Nama',
+					  ),
     );
-    $this->childs = array ({{childs}}
+    $this->childs = array (
     );
   }
 
@@ -19,7 +25,7 @@ class {{modelName}} extends MY_Model {
     $this->datatables
       ->select("{$this->table}.uuid")
       ->select("{$this->table}.orders")
-      {{dtField}};
+      ->select('obat.nama');
     return parent::dt();
   }
 

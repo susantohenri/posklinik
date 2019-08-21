@@ -6,7 +6,7 @@ class Migration_seeds extends CI_Migration {
   function up () {
   	$this->load->model(array('Users', 'Roles', 'Permissions'));
   	$admin = $this->Roles->create(array('name' => 'admin'));
-    foreach (array('User', 'Role', 'Permission'/*additionalEntity*/) as $entity)
+    foreach (array('User', 'Role', 'Permission', 'Pasien', 'Layanan', 'Obat', 'Penjualan', 'PenjualanLayanan', 'PenjualanObat', 'Pembayaran', 'Dokter', 'PenjualanJasaDokter', 'Staff', 'PenjualanLainLain'/*additionalEntity*/) as $entity)
     {
       foreach (array('index', 'create', 'read', 'update', 'delete') as $action)
       {
