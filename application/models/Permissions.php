@@ -10,17 +10,32 @@ class Permissions extends MY_Model {
       array (
         'name' => 'entity',
         'label'=> 'Entity',
+        'options' => array(
+          array ('text' => 'User', 'value' => 'User'),
+          array ('text' => 'Role', 'value' => 'Role'),
+          array ('text' => 'Permission', 'value' => 'Permission'),
+          array ('text' => 'Pasien', 'value' => 'Pasien'),
+          array ('text' => 'Layanan', 'value' => 'Layanan'),
+          array ('text' => 'Obat', 'value' => 'Obat'),
+          array ('text' => 'Penjualan', 'value' => 'Penjualan'),
+          array ('text' => 'PenjualanLayanan', 'value' => 'PenjualanLayanan'),
+          array ('text' => 'PenjualanObat', 'value' => 'PenjualanObat'),
+          array ('text' => 'Dokter', 'value' => 'Dokter'),
+          array ('text' => 'Staff', 'value' => 'Staff'),
+          array ('text' => 'PenjualanLainLain', 'value' => 'PenjualanLainLain'),
+          /*additionalEntity*/
+        ),
         'width' => 4
       ),
       array (
         'name' => 'action',
         'label'=> 'Action',
         'options' => array(
-          array ('text' => 'index', 'value' => 'index'),
-          array ('text' => 'create', 'value' => 'create'),
-          array ('text' => 'read', 'value' => 'read'),
-          array ('text' => 'update', 'value' => 'update'),
-          array ('text' => 'delete', 'value' => 'delete')
+          array ('text' => 'List', 'value' => 'index'),
+          array ('text' => 'Create', 'value' => 'create'),
+          array ('text' => 'Detail', 'value' => 'read'),
+          array ('text' => 'Update', 'value' => 'update'),
+          array ('text' => 'Delete', 'value' => 'delete')
         ),
         'width' => 4
       ),
