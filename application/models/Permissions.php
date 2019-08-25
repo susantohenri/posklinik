@@ -14,6 +14,17 @@ class Permissions extends MY_Model {
           array ('text' => 'User', 'value' => 'User'),
           array ('text' => 'Role', 'value' => 'Role'),
           array ('text' => 'Permission', 'value' => 'Permission'),
+          array ('text' => 'Pasien', 'value' => 'Pasien'),
+          array ('text' => 'Layanan', 'value' => 'Layanan'),
+          array ('text' => 'Obat', 'value' => 'Obat'),
+          array ('text' => 'Penjualan', 'value' => 'Penjualan'),
+          array ('text' => 'PenjualanLayanan', 'value' => 'PenjualanLayanan'),
+          array ('text' => 'PenjualanObat', 'value' => 'PenjualanObat'),
+          array ('text' => 'Dokter', 'value' => 'Dokter'),
+          array ('text' => 'Staff', 'value' => 'Staff'),
+          array ('text' => 'PenjualanLainLain', 'value' => 'PenjualanLainLain'),
+          array ('text' => 'JenisKartu', 'value' => 'JenisKartu'),
+          array ('text' => 'AsalPasien', 'value' => 'AsalPasien'),
           /*additionalEntity*/
         ),
         'width' => 4
