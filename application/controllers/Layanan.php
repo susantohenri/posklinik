@@ -8,4 +8,9 @@ class Layanan extends MY_Controller {
 		parent::__construct();
 	}
 
+	function findByKategori ()
+	{
+		echo json_encode($this->Layanans->find(array('kategori' => $this->input->get('kategori'))));
+	}
+
 }

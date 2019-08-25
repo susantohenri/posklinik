@@ -25,6 +25,7 @@ class Permissions extends MY_Model {
           array ('text' => 'PenjualanLainLain', 'value' => 'PenjualanLainLain'),
           array ('text' => 'JenisKartu', 'value' => 'JenisKartu'),
           array ('text' => 'AsalPasien', 'value' => 'AsalPasien'),
+          array ('text' => 'KategoriLayanan', 'value' => 'KategoriLayanan'),
           /*additionalEntity*/
         ),
         'width' => 4

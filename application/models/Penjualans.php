@@ -98,9 +98,9 @@ class Penjualans extends MY_Model {
 		        array('data-field' => 'nama')
 			    )),
         array (
-				      'name' => 'no_kartu',
+				      'name' => 'no_referensi_transaksi',
 				      'width' => 2,
-		      		'label'=> 'No. Kartu',
+		      		'label'=> 'No. Referensi Transaksi',
 					  ),
         array (
 		      'name' => 'total',

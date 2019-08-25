@@ -20,7 +20,7 @@ class Migration_penjualan extends CI_Migration {
         `kasir` varchar(255) NOT NULL,
         `jenis_pembayaran` varchar(255) NOT NULL,
         `jenis_kartu` varchar(255) NOT NULL,
-        `no_kartu` varchar(255) NOT NULL,
+        `no_referensi_transaksi` varchar(255) NOT NULL,
         `total` INT(11) NOT NULL,
         `dibayar` INT(11) NOT NULL,
         `kembali` INT(11) NOT NULL,

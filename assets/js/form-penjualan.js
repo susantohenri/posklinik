@@ -1,5 +1,10 @@
 window.onload = function () {
 
+  for (fieldName of ['total', 'dibayar', 'kembali'])
+  {
+    $('.total').append($(`[name="${fieldName}"]`).parent().parent())
+  }
+
   formInit($(`[data-controller="${current_controller}"]`))
   $('.main-form').submit(function () {
     $('[data-number]').each (function () {
@@ -99,6 +104,31 @@ function formInit (scope) {
   scope.find('[data-number="true"]').keyup(function () {
     $(this).val(currency(getNumber($(this))))
   })
+
+  kategoriLayanan(scope)
+}
+
+function kategoriLayanan (scope)
+{
+  var katLay = scope.find('[name^="PenjualanLayanan_kategori"]')
+  var lay = scope.find('[name^="PenjualanLayanan_layanan"]')
+  if (katLay.length < 1) return true
+
+  buildLay(katLay.val())
+  katLay.change(function () {
+    buildLay($(this).val())
+  })
+
+  function buildLay (katLayVal)
+  {
+    lay.select2('destroy')
+    $.get(`${site_url}Layanan/findByKategori`, {kategori: katLayVal}, function (lays) {
+      var opt = ''
+      for (layanan of JSON.parse(lays)) opt += `<option value="${layanan.uuid}">${layanan.nama}</option>`
+      lay.html(opt)
+      lay.select2()
+    })
+  }
 }
 
 function getNumber (element) {

@@ -12,6 +12,7 @@ class Migration_penjualanlayanan extends CI_Migration {
         `createdAt` datetime DEFAULT NULL,
         `updatedAt` datetime DEFAULT NULL,
         `penjualan` varchar(255) NOT NULL,
+        `kategori` varchar(255) NOT NULL,
         `layanan` varchar(255) NOT NULL,
         `harga` INT(11) NOT NULL,
         `diskon` INT(11) NOT NULL,

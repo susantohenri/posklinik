@@ -12,10 +12,20 @@ class PenjualanLayanans extends MY_Model {
     );
     $this->form = array (
         array (
+          'name' => 'kategori',
+          'label'=> 'Kategori',
+          'options' => array(),
+          'width' => 3,
+          'attributes' => array(
+            array('data-autocomplete' => 'true'),
+            array('data-model' => 'KategoriLayanans'),
+            array('data-field' => 'nama')
+          )),
+        array (
 		      'name' => 'layanan',
-		      'label'=> 'Jenis Layanan',
+		      'label'=> 'Layanan',
 		      'options' => array(),
-		      'width' => 4,
+		      'width' => 3,
 		      'attributes' => array(
 		        array('data-autocomplete' => 'true'),
 		        array('data-model' => 'Layanans'),
