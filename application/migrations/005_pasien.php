@@ -14,12 +14,18 @@ class Migration_pasien extends CI_Migration {
         `no_rm` varchar(255) NOT NULL,
         `nama` varchar(255) NOT NULL,
         `alamat` varchar(255) NOT NULL,
-        `perusahaan` varchar(255) NOT NULL,
+        `asal_pasien` varchar(255) NOT NULL,
+        `kepala_keluarga` varchar(255) NOT NULL,
+        `status_pasien` varchar(255) NOT NULL,
+        `nomor_kartu_penjamin` varchar(255) NOT NULL,
+        `email` varchar(255) NOT NULL,
         `jenis_kelamin` varchar(255) NOT NULL,
         `tanggal_lahir` DATE NOT NULL,
         `no_identitas` varchar(255) NOT NULL,
         `tlp` varchar(255) NOT NULL,
-        PRIMARY KEY (`uuid`)
+        `hp` varchar(255) NOT NULL,
+        PRIMARY KEY (`uuid`),
+        KEY `asal_pasien` (`asal_pasien`)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8
     ");
 

@@ -28,9 +28,40 @@ class Pasiens extends MY_Model {
 		      		'label'=> 'Alamat',
 					  ),
         array (
-				      'name' => 'perusahaan',
+		      'name' => 'asal_pasien',
+		      'label'=> 'Asal Pasien',
+		      'options' => array(),
+		      'width' => 2,
+		      'attributes' => array(
+		        array('data-autocomplete' => 'true'),
+		        array('data-model' => 'AsalPasiens'),
+		        array('data-field' => 'nama')
+			    )),
+        array (
+				      'name' => 'kepala_keluarga',
 				      'width' => 2,
-		      		'label'=> 'Perusahaan',
+		      		'label'=> 'Kepala Keluarga',
+					  ),
+        array (
+				      'name' => 'status_pasien',
+				      'label'=> 'Status Pasien',
+				      'width' => 2,
+		      		'options' => array(
+                array('text' => 'Pegawai', 'value' => 'Pegawai'),
+                array('text' => 'Suami', 'value' => 'Suami'),
+                array('text' => 'Istri', 'value' => 'Istri'),
+                array('text' => 'Anak', 'value' => 'Anak'),
+				      )
+					  ),
+        array (
+				      'name' => 'nomor_kartu_penjamin',
+				      'width' => 2,
+		      		'label'=> 'Nomor Kartu Penjamin',
+					  ),
+        array (
+				      'name' => 'email',
+				      'width' => 2,
+		      		'label'=> 'Email',
 					  ),
         array (
 				      'name' => 'jenis_kelamin',
@@ -56,7 +87,12 @@ class Pasiens extends MY_Model {
         array (
 				      'name' => 'tlp',
 				      'width' => 2,
-		      		'label'=> 'No. Telp',
+		      		'label'=> 'No. Telp Rumah',
+					  ),
+        array (
+				      'name' => 'hp',
+				      'width' => 2,
+		      		'label'=> 'No. Seluler',
 					  ),
     );
     $this->childs = array (
